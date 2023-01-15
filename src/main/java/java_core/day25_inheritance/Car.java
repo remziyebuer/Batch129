@@ -1,15 +1,19 @@
 package java_core.day25_inheritance;
 
-public class Car {
-    public void engine (){
-        System.out.println("Vehicle engine..");
+public class Car extends Vehicle {
+    public void engine() {
+        System.out.println("Car engine..");
     }
-    public Car(){
-        super();
+
+    public int price = 12000;
+
+    public Car() {
+
         System.out.println("Car 1");
     }
-    public Car(String make){
-        this();
+
+    public Car(String make) {
+
         System.out.println("Car 2: " + make);
     }
 

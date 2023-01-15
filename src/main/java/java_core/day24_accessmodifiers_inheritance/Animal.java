@@ -7,7 +7,7 @@ public class Animal {
         2) Code değişime açık olmalıdır.Hatayı düzeltmek kolay olmalı.
         3) Gelişime update'e açık olmalıdır
         4) Code atomic yapıda olmalı.
-        Note 1:  "parent class"(super class)(ortak ozellikleri icerir)-"child class"(sub class)(Class'a ozel ozellikleri icerir)
+        Note 1:  "parent class"(oder super class)(ortak ozellikleri icerir)-"child class"( sub class)(Class'a ozel ozellikleri icerir)
         Note 2: Bir parent class'a bağlı child class'ı belirtmek için "extends" keyword kullanırız
         Note 3: "public" method'lar "child class'lar tarafindan kullanilabilir"
                 "child class'lar tarafindan kullanilabilir" demek "inherit edilebilir" demektir.
