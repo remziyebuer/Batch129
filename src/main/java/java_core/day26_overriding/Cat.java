@@ -1,13 +1,14 @@
 package java_core.day26_overriding;
 
-public class Cat extends Mammal{
-   public void meow(){
-       System.out.println("Cats meow...");
-   }
+public class Cat extends Mammal {
+    public void meow() {
+        System.out.println("Cats meow...");
+    }
+
     //@Override : Override Annotation ' i denir bunu buraya koyarak
     // Java nin override ' i kontrol etmesini saglariz.Override kurallarinin java tarafindan
     //kontrol edilmesini saglar.
-   @Override
+    @Override
     public void drink() {
         System.out.println("Cats drink...");
     }
@@ -16,18 +17,19 @@ public class Cat extends Mammal{
 // sekilde düzenlemeye benzer.Childda ki
 
     @Override
-    public Cat create() {
+    public Cat create() {//raturn type olusturdugumuz objenin aynisi olabilir ya da parenti olabilir
         return new Cat();
     }
 
+    //metod ta isim ve paranteze dokunulamaz sadece access modifier ve return type dokunulabilinir***
     @Override
     public int add(int a, int b) {
-        return super.add(a, b);
+        return a + b;
     }
 
     @Override
     public Integer multiply(int a, int b) {
-        return super.multiply(a, b);
+        return a * b;
     }
 
     @Override
@@ -37,7 +39,6 @@ public class Cat extends Mammal{
         //kirmizi oka basarsak bizi bu metodun parent klassinda ki eat metoduna götürür.
         // Orda asagi mavi oka basarsak tekrar geri burdaki klassa ve bu sekilde yapilan
         // hale gecer
-
 
 
     }
