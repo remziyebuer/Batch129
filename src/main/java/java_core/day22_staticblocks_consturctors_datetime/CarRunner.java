@@ -19,7 +19,7 @@ public class CarRunner {
         // yukardaki sout lari calistirirsaniz bu sefer adres degil bilgileri
         //görürsünüz
 
-        Car c4 = new Car("Mercedes","C300");
+      //  Car c4 = new Car("Mercedes","C300");
 
     }
 }

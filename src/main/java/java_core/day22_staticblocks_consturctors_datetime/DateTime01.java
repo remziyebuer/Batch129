@@ -11,7 +11,8 @@ public class DateTime01 {
     public static void main(String[] args) {
         Date myDate = new Date();//Date objesi olusturdum.non - staticleri
         // görmek istiyorum
-        System.out.println("myDate = " + myDate);//myDate = Sat Jan 07 21:27:12 CET 2023
+
+        System.out.println("myDate = " + myDate); //myDate = Sat Jan 07 21:27:12 CET 2023
         System.out.println("myDate.getTime() = " + myDate.getTime());//1 Ocak 1978 den
         // bu yana gecen milisaniyeleri verir.Bu tarih digital zamanin baslangic tarihidir
        //( insan oglu hic yerinde durmuyor. 1ms de artik aslinda bir önceki konumunda olmuyor.
@@ -46,6 +47,8 @@ public class DateTime01 {
         //Tarih'de belirli bir bolumu nasil aliriz ?
         System.out.println(LocalDate.now().getMonth() + " " + LocalDate.now().getDayOfMonth());//JANUARY 8
         System.out.println(LocalDate.now().getMonthValue() + "." + LocalDate.now().getDayOfMonth());//1.8
+
+
 
     }
 }

@@ -17,8 +17,8 @@ public interface Ac {
     //yapilacagini child'e birakip child class'in kafa karisikligini engellemis olursunuz
     // Coklu parent'ta detaylar verilmez sadece methodun ne yapmasini istedigini vermemiz gerek
     //Interface lerde methodlar abstract oldugundan abstract yazmaya gerek yoktur.
-    //Interface lerde tum methodlar publictir ve abstractir static degildir
-    //Interface de ki butun variable lar public'tir static tir ve final dir.
+    //Interface lerde tum methodlar publictir ve abstractir static degildir//method
+    //Interface de ki butun variable lar public'tir static tir ve final dir//variable
     //Interface'ler "concrete" method icermezler, dolayisiyla interface'in icindeki hicbirsey
     // istege bagli degildir
     // Interfacein icindeki hersey child class'lar icin mecburidir, bu yuzden Interface'lere

@@ -1,12 +1,14 @@
 package miniproject;
 
 public class User {
-
-
     private String name;
     private String username;
     private String email;
     private String password;
+
+    public User() {
+
+    }
 
     public User(String name, String username, String email, String password) {
         this.name = name;

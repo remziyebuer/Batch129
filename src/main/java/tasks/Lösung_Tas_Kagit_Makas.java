@@ -1,5 +1,7 @@
 package tasks;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Lösung_Tas_Kagit_Makas {
@@ -274,6 +276,72 @@ dongumuz en bastan calisiyor, istemiyorsa da cikis yapiyor.*/
 
 
         }
+
+    }
+
+    public static class VeriBankasi {
+         public static void doktorListesi(){
+             List<String> doctorIsimleri = new ArrayList<>();
+             doctorIsimleri.add("Mustafa");
+             doctorIsimleri.add("Nihat");
+             doctorIsimleri.add("Hamit");
+             doctorIsimleri.add("Sevil");
+             doctorIsimleri.add("Remziye");
+             doctorIsimleri.add("Mehmet");
+
+             List<String> doctorSoyIsimleri = new ArrayList<>();
+             doctorSoyIsimleri.add("Dogan");
+             doctorSoyIsimleri.add("Gunes");
+             doctorSoyIsimleri.add("Yilmaz");
+             doctorSoyIsimleri.add("Sahin");
+             doctorSoyIsimleri.add("Bur");
+             doctorSoyIsimleri.add("Yildirim");
+
+             List<String> doctorUnvanlari = new ArrayList<>();
+             doctorSoyIsimleri.add("Allergist");
+             doctorSoyIsimleri.add("Norolog");
+             doctorSoyIsimleri.add("Genel Cerrah");
+             doctorSoyIsimleri.add("Cocuk Doktoru");
+             doctorSoyIsimleri.add("Dahiliye");
+             doctorSoyIsimleri.add("Kardiyolog");
+
+        }
+
+
+        public static void hastaistesi(){
+            List<String> hastaIsimleri = new ArrayList<>();
+            hastaIsimleri.add("Aykut");
+            hastaIsimleri.add("Salih");
+            hastaIsimleri.add("Hasan");
+            hastaIsimleri.add("Ayse");
+            hastaIsimleri.add("Ali");
+            hastaIsimleri.add("Ömer");
+
+            List<String> hastaSoyIsimleri = new ArrayList<>();
+            hastaSoyIsimleri.add("Adali");
+            hastaSoyIsimleri.add("Bas");
+            hastaSoyIsimleri.add("Kacan");
+            hastaSoyIsimleri.add("Gun");
+            hastaSoyIsimleri.add("Kızılırmak");
+            hastaSoyIsimleri.add("Can");
+
+            List<Integer> hastaIdleri = new ArrayList<>();
+            hastaIdleri.add(111);
+            hastaIdleri.add(222);
+            hastaIdleri.add(333);
+            hastaIdleri.add(444);
+            hastaIdleri.add(555);
+            hastaIdleri.add(666);
+
+        }
+
+
+
+
+
+        String [] durumlar ={"Alerji","Bas agrisi","Diyabet", "Soguk alginligi","Migren", "Kalp hastaliklari" };
+
+
 
     }
 }

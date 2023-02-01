@@ -1,5 +1,11 @@
 package java_core.day22_staticblocks_consturctors_datetime;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.util.Date;
+
 public class Car {
     /*
      Constructor nedir?
@@ -31,6 +37,9 @@ public class Car {
     String model = "Accord";
     int year = 2023;
     boolean hybrid = true;
+
+
+
 //Genellikle Constructor'lari public yaparlar.yapilmamissa default demektir
    public Car(String marke , String model , int year , boolean hybrid){
         this.marke = marke;
@@ -44,12 +53,6 @@ public class Car {
         this.marke = marke;
         this.model = model;//biz olusturduk
 
-        if(year==2023){
-            this.year=0;
-        }
-        if(hybrid==true){
-            this.hybrid=false;
-        }
     }
    //Genellikle Constructor'lari biz olusturmayiz intelij ey e olusturturuz.
     // otommatik constructor olusturma icin class ' ta sag tikla Generate sec cikan kutuda
@@ -60,8 +63,10 @@ public class Car {
         this.marke = marke;
         this.year = year;       //Otomatik olusturtuk
     }
-    // "class ta sag tikla>Generate>tostring" hepsinin secilmesinden emin olarak oku tuslayin
-    @Override
+
+
+
+
     public String toString() {
         return "Car{" +
                 "marke='" + marke + '\'' +
@@ -70,6 +75,7 @@ public class Car {
                 ", hybrid=" + hybrid +
                 '}';
 
+        }
 
     }
-}
+

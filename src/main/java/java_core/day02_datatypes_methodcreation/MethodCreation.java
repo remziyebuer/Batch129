@@ -4,7 +4,7 @@ public class MethodCreation {
     public static void main(String[] args) {
 
 
-        int sonuc = add(30, 50);//Java 3 ve 5 i topla dedim.
+        int sonuc =add(30, 50);//Java 3 ve 5 i topla dedim.
         System.out.println(sonuc);
 
         long carpmaSonucu = multiply(3, 6);

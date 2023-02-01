@@ -14,19 +14,25 @@ edilmesini saglar.
           access modifier'indan dar olamaz
           Overridden Method ==> protected ise Overriding Method ==> protected + public
           Overridden Method ==> default ise Overriding Method ==> default + protected + public
-          Overridden Method ==> private ise Overriding Method ==> override olmaz ki access modifier'i olsun. (Bkz 5. kural)
-        7)Child Class'da override edilen method'un(Overriding Method) return type'i method'un return ettigi data type'inin aynisi veya o data type'inin
-          parent'i olarak secilebilir.
-        8)Method'un return type'i "primitive" ise, Overriding yaparken return type degistirilemez. Cunku; return type ya ayni olur veya parent'dan secilir ama
-          primitive'ler arasinda "parent-child iliskisi" olmadigindan parent'dan secmek mevzu bahis olamaz o zaman tek secenek aynisi olmalidir kalir.
-        9)Method'un return type'i "Wrapper Class" ise, Overriding yaparken return type degistirilemez. Cunku; return type ya ayni olur veya parent'dan secilir,
-          ama Java bir wrapper class'i digerinin parent'i yapmadigindan parent'dan secme ihtimali yoktur, geriye sadece aynisi olma ihtimali kalir.
+          Overridden Method ==> private ise Overriding Method ==> override olmaz ki access
+          modifier'i olsun. (Bkz 5. kural)
+        7)Child Class'da override edilen method'un(Overriding Method) return type'i method'un
+        return ettigi data type'inin aynisi veya o data type'inin parent'i olarak secilebilir.
+        8)Method'un return type'i "primitive" ise, Overriding yaparken return type degistirilemez.
+         Cunku; return type ya ayni olur veya parent'dan secilir ama primitive'ler arasinda
+          "parent-child iliskisi" olmadigindan parent'dan secmek mevzu bahis olamaz o zaman tek
+          secenek aynisi olmalidir kalir.
+        9)Method'un return type'i "Wrapper Class" ise, Overriding yaparken return type
+        degistirilemez. Cunku; return type ya ayni olur veya parent'dan secilir,
+          ama Java bir wrapper class'i digerinin parent'i yapmadigindan parent'dan secme ihtimali
+          yoktur, geriye sadece aynisi olma ihtimali kalir.
         10)Method'un return type'i "void" ise, Overriding yaparken return type degistirilemez.
-
         11) Final kelimesini "Variable"larda kullanabilirsiniz.
-                    ->final variable ise
+                    -> final variable ise;
                     i) mutlaka değer atanmalıdır
                     ii) ilk atanan değer değiştirilemez
+                    iii)ismi buyuk harflerle yazilir iki kelimesi arasina alt cizgi konur PI gibi
+                    MAX_VALUE ve MIN_VALUE gibi
 
         12)Final kelimesini "Method" larda kullanabilirsiniz.
                      ->method final ise;
@@ -36,9 +42,11 @@ edilmesini saglar.
         13)Final kelimesini "Class"larda kullanabilirsiniz.
                        ->class final ise;
                        i)o class'ın child'ı olamaz
-        14) "final" method'lar ve "static" method'lar "override"  edilemezler.
-        15)"Override" yapabilmek icin "Inheritance" sarttir. Baska bir ifadeyle; Parent-Child iliskisi sarttir.
-        16) Method Overloading "Compile Time Polymorphism" dir, Method Overriding "Run Time Polymorphism" dir.
+        14) "final" method'lar ve "static" method'lar "override"  edilemezler****
+        15)"Override" yapabilmek icin "Inheritance" sarttir. Baska bir ifadeyle;
+         Parent-Child iliskisi sarttir.
+        16) Method Overloading "Compile Time Polymorphism" dir, Method Overriding "Run Time
+         Polymorphism" dir.(Polymorphism: cok sekillilik)
         17) Method Overloading "static Polymorphism" dir, Method Overriding "dynamic Polymorphism" dir.
 
 
@@ -57,6 +65,7 @@ public class Animal {// Parent'daki override edilmis eat() method'una "Overridde
     }
 
     public Animal create() {
+
         return new Animal();
     }
 

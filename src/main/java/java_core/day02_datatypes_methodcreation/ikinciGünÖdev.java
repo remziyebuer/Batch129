@@ -19,6 +19,8 @@ public class ikinciGünÖdev {
         double daireninCevresi = perimeterCircle(4);
         System.out.println("daireninCevresi = " + daireninCevresi);
 
+
+
     }
 
 
