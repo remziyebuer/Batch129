@@ -2,7 +2,15 @@ package tasks.hastahane;
 
 public class Hastahane extends VeriBankasi{
     private  Doktor doktor;// = new Doktor();
-    private  Doktor hasta;// = new Hasta();
+    private  Hasta hasta;// = new Hasta();
+
+    public Hastahane() {
+    }
+
+    public Hastahane(Doktor doktor, Hasta hasta) {
+        this.doktor = doktor;
+        this.hasta = hasta;
+    }
 
     public Doktor getDoktor() {
         return doktor;
@@ -12,11 +20,11 @@ public class Hastahane extends VeriBankasi{
         this.doktor = doktor;
     }
 
-    public Doktor getHasta() {
+    public Hasta getHasta() {
         return hasta;
     }
 
-    public void setHasta(Doktor hasta) {
+    public void setHasta(Hasta hasta) {
         this.hasta = hasta;
     }
 }

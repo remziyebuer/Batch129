@@ -4,7 +4,7 @@ public class Hasta {
     private String isim;
     private String soyIsim;
     private int hastaId;
-    private String hastaDurumu;//Durum classinda pdf te
+    private Durum hastaDurumu;//Durum classinda pdf te
 
     public String getIsim() {
         return isim;
@@ -30,11 +30,11 @@ public class Hasta {
         this.hastaId = hastaId;
     }
 
-    public String getHastaDurumu() {
+    public Durum getHastaDurumu() {
         return hastaDurumu;
     }
 
-    public void setHastaDurumu(String hastaDurumu) {
+    public void setHastaDurumu(Durum hastaDurumu) {
         this.hastaDurumu = hastaDurumu;
     }
 }

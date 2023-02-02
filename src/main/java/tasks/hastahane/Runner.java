@@ -3,19 +3,13 @@ package tasks.hastahane;
 public class Runner {
 
     private static Hastahane hastane  = new Hastahane();
-
+     static Doktor doktor = new Doktor();
     public static void main(String[] args) {
 
+        String hastaDurumu="Bas agrisi";
+        String unvan = doktorUnvani(hastaDurumu);
 
-
-
-
-
-        String hastaDurumu="Diyabet";
-        String unvan=doktorUnvani(hastaDurumu);
-
-
-       hastane.setDoktor( doktorBul(unvan));
+       hastane.setDoktor(doktorBul(unvan));
 
 
 
@@ -48,10 +42,11 @@ public class Runner {
         } else if (hastaDurumu.equalsIgnoreCase("Kalp hastaliklari")) {
             return hastane.unvanlar[5];
         }
+
         return "yanlis durum";
     }
    public static  Doktor doktorBul(String unvan) {
-        Doktor doktor = new Doktor();
+
 
         for (int i = 0; i <hastane.unvanlar.length; i++){
 
@@ -61,8 +56,8 @@ public class Runner {
 
         }
 
-
        return doktor;
+
    }
 
 
