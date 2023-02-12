@@ -1,5 +1,7 @@
 package java_core.day36lambda;
 
+import jdk.jshell.execution.Util;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -40,12 +42,17 @@ public class Lambda01 {
         System.out.println();
         printAllSortWithLastCharUpperDistinct(list);
         System.out.println();
+        printAllSortWithLastCharUpperDistinct2(list);
+        System.out.println();
         printAllSortWithLengthUpperDistinctSameLengthsInAlphabeticalOrder(list);
         System.out.println();
         //System.out.println(removeElementIfTheLengthGreaterThanFive(list));
         System.out.println();
-        System.out.println(removeElementIfStartsWithAorEndswithd(list));
+        //System.out.println(removeElementIfStartsWithAorEndswithd(list));
+        System.out.println();
         System.out.println(printLengthSquare(list));
+        System.out.println();
+        System.out.println(printElementsLengthEven(list));
     }
     //Example 1: Create a method to find the half of the elements greater than 5, distinct,
     // in reverse order, in a list.Liste yi buyukten kucuge siralayarak tekrarsiz olacak sekilde
@@ -98,7 +105,7 @@ public class Lambda01 {
                 map(t -> t.toUpperCase()).
                 sorted(Comparator.comparing(t -> t.length())).//uzunluklarini karsilastirarak sirala
                 // siralamanin kuralini ben belirlemis oldum.
-                        forEach(t -> System.out.print(t + " "));//ve yazdir bu elemanlari birer birer.
+                        forEach(Utils::printInTheSameLineWithSpace);//ve yazdir bu elemanlari birer birer.
 
     }
 
@@ -115,6 +122,23 @@ public class Lambda01 {
 
     }
 
+    //2.yol ve su soru versiyonu;
+    // Tum list elemanlarini buyuk harfle, son harflerine gore azalan sirada, tekrarsiz olarak yazdiriniz
+    public static void printAllSortWithLastCharUpperDistinct2(List<String> list) {
+
+        list.
+                stream().
+                distinct().
+                map(String::toUpperCase).//map 'in sorted tan önce olmasi iyidir
+                sorted(Comparator.comparing(Utils::getLastChar).reversed()).//java da
+                // son karakteri veren metod yok utils te kendimiz olusturuyoruz. bu durumda reversed yazdigimda
+                //sikayet etmiyor yani java bir anlamda beni mecbur birakiyor meth.ref. kullanmaya
+                // artik buna azalan sirada yazabiliriz soru olarak
+                forEach(t -> System.out.print(t + " "));
+
+
+    }
+
     //Example 6: Tum list elemanlarini buyuk harfle, uzunluklarina artan sirada, tekrarsiz olarak yazdiriniz.
     //Uzunluklari ayni olan elemanlar alfabetik sirada olsunlar
     public static void printAllSortWithLengthUpperDistinctSameLengthsInAlphabeticalOrder(List<String> list) {
@@ -123,7 +147,7 @@ public class Lambda01 {
                 distinct().
                 map(String::toUpperCase).
                 sorted(Comparator.comparing(String::length).thenComparing(Comparator.naturalOrder())).
-                forEach(System.out::println);
+                forEach(System.out::println);//yanyana yazdiran M. java da yok utilste olusturup 4.soruda kullandik
         //String classtaki length' e göre sirala sonra naturel order a göre sirala
         //(String::length) bu yapiya method referance ile yazmak denir eger varsa bu tercih edilir eger
         // bu varsa bazen t 'li olanin altini java altini cizer
@@ -165,5 +189,9 @@ public static List<String> removeElementIfStartsWithAorEndswithd(List<String> li
 
     }
     //10) List elemanlarindan karakter sayisi cift sayi olanlari bir list icinde ekrana yazdiriniz.
+    public static  List <String> printElementsLengthEven(List<String>list){
+    // return   list.stream().filter(t->t.length()%2==0).collect(Collectors.toList());
+        return   list.stream().filter(Utils::isEven).collect(Collectors.toList());
+    }
 
 }
