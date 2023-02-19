@@ -1,4 +1,4 @@
-package miniproject.login;
+package miniproject.yasinhocaloginproje;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package miniproject.login;
+package miniproject.yasinhocaloginproje;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class UserService {
 
 
     }
-
+//*************************************************
     public void register() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Ad soyad giriniz");
@@ -78,14 +78,48 @@ public class UserService {
 
     }
 
+    //*****************************************************************
+
+    public void login(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Kullanici adi veya email giriniz");
+        String userNameOrEmail = scanner.nextLine();
+        boolean isMail = emailList.contains(userNameOrEmail);
+        boolean isUsername = usernameList.contains(userNameOrEmail);
+        if(isMail||isUsername) {//eger e mail ya da kullanici adi varsa bunu söyleriz yoksa else deyip
+            // kullanici bulunamadi demeliyiz
+
+            while (true) {
+                System.out.println("Sifrenizi giriniz");
+                String password = scanner.nextLine();
+                //girmis oldugum kullanici adinin indexini alacam.passworde denk gelip gelmedigini bulmak icin
+
+                int idx;
+
+                if (isUsername) {
+                    idx = usernameList.indexOf(userNameOrEmail);
+                } else {
+                    idx = emailList.indexOf(userNameOrEmail);
+                }
+
+                if (passwordList.get(idx).equals(password)) {
+                    System.out.println("Sisteme giris yaptiniz");
+                    break;
+                } else {
+                    System.out.println("Sifreniz yanlis.Tekrar deneyiniz");
+                }
+            }//while
+
+        }else {//eger e mail ya da kullanici adi varsa bunu söyleriz yoksa else deyip
+            // kullanici bulunamadi demeliyiz
+            System.out.println("Sisteme kayitli kullanici bulunamadi");
+            System.out.println("Bilgileri kontrol ediniz ya da uye olunuz");
+        }
+    }//login
 
 
 
-
-
-
-
-
+    //*************************************************************************
 
         public static boolean validateEmail (String email){
             boolean isValid;
