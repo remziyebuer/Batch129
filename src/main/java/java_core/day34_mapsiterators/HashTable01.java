@@ -1,5 +1,7 @@
 package java_core.day34_mapsiterators;
 
+import java.util.Hashtable;
+
 public class HashTable01 {
     /*
   1)HashTable "thread-safe" ve "synchronized" dir.
@@ -9,9 +11,14 @@ public class HashTable01 {
    kullanilmasina musaade etmezler.
    Note:"Multi-thread" ve "synchronization" kullanmaniz gerekirse ve
     "key" ve "value" larda "null" kullanmak
-    yasak ise HasTable kullanmak gerekir.
+    yasak ise HashTable kullanmak gerekir.
      */
     public static void main(String[] args) {
+        Hashtable<Integer, Integer> ht = new Hashtable<>();
+        ht.put(1, 2);// 1 ve -1
+        ht.put(2, 4);// 1, -1, 2, -2
+        ht.put(6, 8);// 1, 2, 3, 6, -1, -2, -3, -6
 
+        System.out.println(ht);// {6=8, 2=4, 1=2}
     }
 }
