@@ -34,7 +34,7 @@ public class HashSet01 {
         hs.add(78);
         hs.add(638);
         hs.add(39);
-        hs.add(5);
+        hs.add(12);
 
         System.out.println(hs);//elemanlar rastgele siralandi.(az sayida eleman oldg. farkli zaman ve bilg. ayni
         //siralamayi yapabiliyor ama cok fazla sayi varsa binlerce mesela her seferde farkli cikar)
