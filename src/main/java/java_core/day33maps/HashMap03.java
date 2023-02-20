@@ -31,5 +31,6 @@ public class HashMap03 {
             }
 
         }
+        System.out.println(lettersMap);
         }
 }
