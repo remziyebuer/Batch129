@@ -16,7 +16,8 @@ public class ArrayList03 {
 
         //[Miami, Istanbul, Kayseri, Almaty, Kayseri]
         //remove() methodu index ile kullanilirsa o index'te ki elemani siler.
-        //remove() methodu index ile kullanilirsa size sildigi elemani verir.
+        //remove() methodu index ile kullanilirsa ve bir degere atanirsa o deger
+        // size sildigi elemani verir.
 
         String n = cities.remove(1);
         System.out.println(n);//Istanbul
