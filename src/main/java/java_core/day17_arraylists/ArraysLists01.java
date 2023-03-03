@@ -2,6 +2,7 @@ package java_core.day17_arraylists;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class ArraysLists01 {
     public static void main(String[] args) {
@@ -96,6 +97,16 @@ public class ArraysLists01 {
 
 //Collections.sort() List'deki elemanları alıp küçükten büyüğe sıraladı
 
+
+     //Array i liste cevirme;
+        int arr[] = {2, 4, 6, 8};
+        List<Integer> list = new ArrayList<>();
+        int i = 0;
+        do {
+            list.add(arr[i]);
+            i++;
+        } while (i < arr.length);
+        System.out.println(list);
 
     }
 }

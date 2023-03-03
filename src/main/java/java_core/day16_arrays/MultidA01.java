@@ -23,7 +23,8 @@ public class MultidA01 {
 
         //Note: Array'lere non-primitive data konulamaz.
         //      Array'lere primitive data veya reference konulur.
-        //      Ama siz bir array'i yazdirmak istediginizde Java adres'ler yardimi ile non-primitive data'ya ulasir
+        //      Ama siz bir array'i yazdirmak istediginizde Java adres'ler yardimi ile non-primitive
+        //      data'ya ulasir
         //      ve o non-primitive data'yi sanki array'in icindeymis gibi gosterir.
 
         //MultiDimensional Array'lerdeki belli elemanlara nasil ulasilir?

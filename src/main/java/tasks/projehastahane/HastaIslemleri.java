@@ -9,82 +9,83 @@ public class HastaIslemleri {
     static Hastahane hastahane = new Hastahane();
     static Scanner scan = new Scanner(System.in);
 
-    public static void hastaMenusuGoster() {
-        int secim;
+    public static void hastaMenusuGoster() throws InterruptedException {
+        String secim;
+        do {
 
-        do{
-        System.out.println("=====HASTA MENUSU=====\n" +
-                "1-Hasta Ekle\n" +
-                "2-Hasta Listesi Yazdir\n" +
-                "3-Hasta Durumu Listele\n" +
-                "4-Hasta Silme\n" +
-                "5-Hasta Bulma\n" +
-                "6-Ana Menu\n" +
-                "7-Cikis" +
-                "Yapmak istediginiz islemi seciniz\n");
+            System.out.println("=====HASTA MENUSU=====\n" +
+                    "1-Hasta Ekle\n" +
+                    "2-Hasta Listesi Yazdir\n" +
+                    "3-Hasta Durumu Listele\n" +
+                    "4-Hasta Silme\n" +
+                    "5-Hasta Bulma\n" +
+                    "6-Ana Menu\n" +
+                    "7-Cikis" +
+                    "Yapmak istediginiz islemi seciniz\n");
 
 
-           secim = scan.nextInt();
-        switch (secim) {
-            case 1:
-                hastaEkle();
-                break;
-            case 2:
-                hastaListesiYazdir();
-                break;
-            case 3:
-                hastaDurumListele();
-                break;
-            case 4:
-                break;
-            case 5:
-                hastaBul();
-                break;
-            case 6:
-                Hastahane.menuGoster();
-                break;
-            case 7:
-                System.out.println("Sistemden cikisiniz gerceklesti.Tekrar bekleriz.");
-                break;
-            default:
-                System.out.println("Hatali giris yaptiniz.Lutfen tekrar deneyiniz.");
-        }
-        }while(secim!=7);
-
+            secim = scan.nextLine();
+            switch (secim) {
+                case "1":
+                    hastaEkle();
+                    break;
+                case "2":
+                    hastaListesiYazdir();
+                    break;
+                case "3":
+                    hastaDurumListele();
+                    break;
+                case "4":
+                    hastaKayitSilme();
+                    break;
+                case "5":
+                    hastaBul();
+                    break;
+                case "6":
+                    Hastahane.menuGoster();
+                    break;
+                case "7":
+                    System.out.println("Sistemden cikisiniz gerceklesti.Tekrar bekleriz.");
+                    break;
+                default:
+                    System.out.println("Hatali giris yaptiniz.Lutfen tekrar deneyiniz.");
+            }
+        } while (!secim.equals("7"));
     }
     //******************************************************************************
 
-    public static void hastaEkle() {
+    public static void hastaEkle() throws InterruptedException {
 
+        Scanner scan = new Scanner(System.in);
         System.out.println("Lutfen hasta ismi giriniz.");
-        String isim = scan.nextLine();
+        String ism = scan.nextLine();
 
 
         System.out.println("Lutfen hasta soy ismi giriniz.");
-        String soyIsim = scan.nextLine();
-
+        String soyad = scan.nextLine();
 
         System.out.println("Lutfen Hasta aktuel durumu giriniz.");
         String aktuelDurum = scan.nextLine();
 
+
         Integer yeniId = (Hastahane.hastaMap.size() + 1) * 111;
-        String yeniValue = isim + "," + soyIsim + "," + aktuelDurum;
+        String yeniValue = ism + "," + soyad + "," + aktuelDurum;
         Hastahane.hastaMap.put(yeniId, yeniValue);
 
-        System.out.println("Hastahanemize "+aktuelDurum+" sikayeti ile gelen "+
-                isim+ " " + soyIsim +"  in hastahanemize "+ +yeniId+" ID'si ile kaydi " +
+        System.out.println("Hastahanemize " + aktuelDurum + " sikayeti ile gelen " +
+                ism + " " + soyad + "  in hastahanemize " + +yeniId + " ID'si ile kaydi " +
                 "basari ile yapilmistir.");
 
-
+        Thread.sleep(4000);
     }
 
     //*********************************************************************************
-    public static void hastaListesiYazdir() {
+    public static void hastaListesiYazdir() throws InterruptedException {
 
         System.out.println
                 ("\n=================HASTA LISTESI=================\n" +
-                " Hasta ID        Hasta  Adi        Hasta Soyadi   \n" +
-                "_________________________________________________");
+                        " Hasta ID        Hasta  Adi        Hasta Soyadi   \n" +
+                        "_________________________________________________");
 
         Set<Map.Entry<Integer, String>> hastaEntrySet = Hastahane.hastaMap.entrySet();
         for (Map.Entry<Integer, String> w : hastaEntrySet) {
@@ -95,11 +96,12 @@ public class HastaIslemleri {
             System.out.printf("%5s  %20s  %18s  \n", hastaKey, hastaValuearr[0],
                     hastaValuearr[1]);
         }
+        Thread.sleep(4000);
 
     }
 
     //*********************************************************************************
-    public static void hastaDurumListele() {
+    public static void hastaDurumListele(){
 
 
         System.out.println("==============HASTA DURUM LISTESI==============\n" +
@@ -145,8 +147,22 @@ public class HastaIslemleri {
     }
 
 
-//**********************************************************************************
+    //**********************************************************************************
+    public static void hastaKayitSilme() {
 
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Silinecek hasta Id ' sini  giriniz");
+
+        Integer silenecekId = scan.nextInt();
+        //  String silinecekValueBulma = Hastahane.hastaMap.get(silenecekId);
+        String bulunanValueSil = Hastahane.hastaMap.remove(silenecekId);
+
+
+        System.out.println("Istenen hasta silindi");
+
+
+    }
 
 }
 

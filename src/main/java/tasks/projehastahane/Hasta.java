@@ -6,6 +6,16 @@ public class Hasta {
     private int hastaId;
     private String hastaDurumu;//Durum classinda pdf te
 
+    public Hasta(String isim, String soyIsim, int hastaId, String hastaDurumu) {
+        this.isim = isim;
+        this.soyIsim = soyIsim;
+        this.hastaId = hastaId;
+        this.hastaDurumu = hastaDurumu;
+    }
+
+    public Hasta() {
+    }
+
     public String getIsim() {
         return isim;
     }

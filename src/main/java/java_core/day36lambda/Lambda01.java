@@ -1,7 +1,5 @@
 package java_core.day36lambda;
 
-import jdk.jshell.execution.Util;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -191,7 +189,7 @@ public static List<String> removeElementIfStartsWithAorEndswithd(List<String> li
     //10) List elemanlarindan karakter sayisi cift sayi olanlari bir list icinde ekrana yazdiriniz.
     public static  List <String> printElementsLengthEven(List<String>list){
     // return   list.stream().filter(t->t.length()%2==0).collect(Collectors.toList());
-        return   list.stream().filter(Utils::isEven).collect(Collectors.toList());
+        return   list.stream().filter(Utils::isLengthEven).collect(Collectors.toList());
     }
 
 }

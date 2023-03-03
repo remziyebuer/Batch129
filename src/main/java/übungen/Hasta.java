@@ -37,4 +37,5 @@ public class Hasta {
     public void setHastaID(int hastaID) {
         this.hastaID = hastaID;
     }
+
 }

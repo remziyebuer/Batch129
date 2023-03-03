@@ -7,9 +7,9 @@ public class DoktorIslemleri {
     static Hastahane hastahane = new Hastahane();
     static Scanner scan = new Scanner(System.in);
 
-    public static void doktorMenusuGoster() {
+    public static void doktorMenusuGoster() throws InterruptedException {
 
-        int secim;
+        String secim;
 do{
         System.out.println("\n=====DOKTOR MENUSU=====\n" +
                 "1-Doktor Ekle\n" +
@@ -20,36 +20,39 @@ do{
                 "6-Cikis" +
                 "Yapmak istediginiz islemi seciniz\n");
 
-        secim = scan.nextInt();
+        secim = scan.nextLine();
 
         switch (secim) {
-            case 1:
+            case "1":
                 doktorEkle();
                 break;
-            case 2:
+            case "2":
                 doktorListesiYazdir();
                 break;
-            case 3:
+            case "3":
                 unvandanDoktorBulma();
                 break;
-            case 4:
+            case "4":
+                doktorKayitSilme();
                 break;
-            case 5:
+            case "5":
                 Hastahane.menuGoster();
                 break;
-            case 6:
+            case "6":
                 System.out.println("Sistemden cikisiniz gerceklesti.Tekrar bekleriz.");
                 break;
             default:
                 System.out.println("Hatali giris yaptiniz.Lutfen tekrar deneyiniz.");
 
         }
-        }while(secim!=6);
+    } while (!secim.equals("6"));
 
     }
 //********************************************************************************************
 
-    public static void doktorEkle() {
+    public static void doktorEkle(){
+        Scanner scan = new Scanner(System.in);
+
 
         System.out.println("Lutfen Doktor Tc no giriniz.");
         String tcNo = scan.nextLine();
@@ -71,11 +74,12 @@ do{
         System.out.println(tcNo+"  Tc no'lu " + unvan + " Bolumunden Dr."+ isim +" "+ soyIsim+
                 "\ndoktor listesine basari ile eklenmistir.");
 
+
     }
 
     //*********************************************************************************************
 
-    public static void doktorListesiYazdir() {
+    public static void doktorListesiYazdir() throws InterruptedException {
         Set<Map.Entry<String,String>> doktorEntrySet = Hastahane.doktorMap.entrySet();
 
         System.out.println("\n========================DOKTOR LISTESI=====================\n" +
@@ -95,11 +99,13 @@ do{
 
             System.out.printf("%12s %10s %14s %20s \n", doktorKey,doktorValuearr[0],
                     doktorValuearr[1],doktorValuearr[2]);
+
+            Thread.sleep(4000);
         }
     }
 //**********************************************************************************
 
-    public static void unvandanDoktorBulma() {
+    public static void unvandanDoktorBulma(){
         System.out.println("Aradiginiz  doktorun unvanini giriniz");
 
         String unvan = scan.nextLine();
@@ -125,8 +131,27 @@ do{
                             doktorValuearr[1],doktorValuearr[2]);
                 }
             }
+
+
     }
 //*****************************************************************************************
+public static void doktorKayitSilme(){
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Silinecek doktor tc no' sunu  giriniz");
+
+    String silenecekTc = scan.nextLine();
+    String silinecekValueBulma = Hastahane.doktorMap.get(silenecekTc);
+    String bulunanValueSil = Hastahane.doktorMap.remove(silenecekTc);
+
+
+        System.out.println("Istenen doktor silindi");
+
+
+
+
+}
+
+
 }
 
 

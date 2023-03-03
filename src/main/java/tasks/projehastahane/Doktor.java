@@ -1,11 +1,23 @@
 package tasks.projehastahane;
 
 public class Doktor {
-    private String isim;
+    public String isim;
+
+
     private String soyIsim;
     private String unvan;
 
+    public Doktor() {
+    }
+
+    public Doktor(String isim, String soyIsim, String unvan) {
+        this.isim = isim;
+        this.soyIsim = soyIsim;
+        this.unvan = unvan;
+    }
+
     public String getIsim() {
+
         return isim;
     }
 

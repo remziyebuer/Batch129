@@ -66,12 +66,11 @@ public class Test06 {
             randevuSaati = input.nextLine();
             if (saatler.contains(randevuSaati)) {
                 saatler.remove(randevuSaati);
-            }
 
-            boolean silindiMi = saatler.remove(randevuSaati);
+                boolean silindiMi = saatler.remove(randevuSaati);
             if (silindiMi) {
                 System.out.println("Randevu saatiniz basarili bir sekilde kaydedilmistir");
-                break;
+                break;}
             } else {
                 System.out.println("Müsait olmayan ya da hatali bir randevu saati girdiniz.");
             }

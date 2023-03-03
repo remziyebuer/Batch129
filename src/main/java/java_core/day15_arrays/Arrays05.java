@@ -17,7 +17,7 @@ String arr[]= {"Michael", "Ajda", "Thomas", "Tom"};
         System.out.println(Arrays.toString(arr));
 
 
-        Arrays.sort(arr, Comparator.comparingInt(String::length));
+       Arrays.sort(arr, Comparator.comparingInt(String::length));
         System.out.println(Arrays.toString(arr));
 
         //Example 2: String Array elemanlarini character sayisina gore buyukten kucuge siralayiniz.

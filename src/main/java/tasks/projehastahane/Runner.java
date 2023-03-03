@@ -2,11 +2,27 @@ package tasks.projehastahane;
 
 
 public class Runner {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        VeriBankasi.doktorMapEkle();
-        VeriBankasi.hastaMapEkle();
+       VeriBankasi.doktorMapEkle();
+       VeriBankasi.hastaMapEkle();
         Hastahane.start();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 

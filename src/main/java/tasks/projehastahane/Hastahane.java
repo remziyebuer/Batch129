@@ -2,6 +2,7 @@ package tasks.projehastahane;
 
 
 import java.util.Scanner;
+import java.util.logging.SocketHandler;
 
 public class Hastahane extends VeriBankasi {
 
@@ -14,28 +15,33 @@ public class Hastahane extends VeriBankasi {
         + "Yapmak istediginiz islemi seciniz\n");
     }
     //***************************************************
-        public  static void start(){
-           int secim ;
+        public  static void start() throws InterruptedException {
 
-         do {
-             menuGoster();
-             Scanner scan = new Scanner(System.in);
-             secim = scan.nextInt();
-             switch (secim) {
-                 case 1:
-                     DoktorIslemleri.doktorMenusuGoster();
-                     break;
+              String secim;
 
-                 case 2:
-                     HastaIslemleri.hastaMenusuGoster();
-                     break;
-                 case 0:
-                     System.out.println("Sistemden cikisiniz gerceklesti.Tekrar bekleriz.");
-                     break;
-                 default:
-                     System.out.println("Hatali giris yaptiniz.Lutfen tekrar deneyiniz.");
-             }
-         }while(secim!=0);
+do {
+
+
+    menuGoster();
+    Scanner scan = new Scanner(System.in);
+    secim = scan.nextLine();
+    switch (secim) {
+        case "1":
+            DoktorIslemleri.doktorMenusuGoster();
+            break;
+        case "2":
+            HastaIslemleri.hastaMenusuGoster();
+            break;
+        case "0":
+            System.out.println("Sistemden cikisiniz gerceklesti.Tekrar bekleriz.");
+            break;
+        default:
+            System.out.println("Hatali giris yaptiniz.Lutfen tekrar deneyiniz.");
+
+    }
+} while (!secim.equals("0"));
+
+
 
 
 
