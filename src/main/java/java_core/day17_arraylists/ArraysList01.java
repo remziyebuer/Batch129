@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ArraysLists01 {
+public class ArraysList01 {
     public static void main(String[] args) {
         /*
         1)ArrayList'ler coklu data depolamak icin kullanilir
