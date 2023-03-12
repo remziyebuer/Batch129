@@ -27,11 +27,12 @@ public class Animal {
                  Bizim class'imiz default constructor'a ihtiyac duydugunda parent olan  "Object Class" a gider ve oradaki constructor'i kullanir.
      */
 
-    protected void eat(){
+
+    void eat(){
         System.out.println("Animals eat...");
     }
 
-    public void drink(){
+    public  void drink(){
         System.out.println("Animals drink...");
     }
 }

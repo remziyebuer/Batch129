@@ -1,4 +1,4 @@
-package sulehocaexceptions.bulutluöz.okul;
+package okul;
 
 public class Okul {
     static final String OKUL_ISMI = "Yildiz Koleji";

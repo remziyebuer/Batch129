@@ -1,4 +1,4 @@
-package sulehocaexceptions.bulutluöz.okul;
+package okul;
 
 import java.util.Scanner;
 

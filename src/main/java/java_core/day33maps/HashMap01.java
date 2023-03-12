@@ -30,18 +30,29 @@ public class HashMap01 {
 
         HashMap<String, Integer> hm = new HashMap<>();// iki bolumun de data typ i yazilmali
         // data type primitive olamaz.
+
         System.out.println(hm);//{}
+
         //HashMap'lere nasil entry eklenir?
+
         hm.put("USA", 400000000);//add metodu yerine map ' lerde put var add yok.
+
         hm.put("Germany", 83000000);
+
         hm.put("Albania", 30000000);
         //Ayni "key" i kullarak yeni bir "entry" eklerseniz var olan "value" u update etmis olursunuz.
+
         hm.put("Albania", 28000000);
+
         System.out.println(hm);//{USA=400000000, Germany=83000000, Albania=28000000}
+
         hm.put(null, 12000000);//nufusunu bilip adini bilmedigim bir ulke
+
         hm.put(null, 18000000);// {USA=400000000, Germany=83000000, Albania=28000000}
+
         // ikinci defa yazarsam nufusunu bilip adini bilmedigim
         // ulkeyi gunceller cun ki keyler uniq dir.
+
         hm.put("Myanmar", null);
         hm.put("Bhutan", null);
         System.out.println(hm);// {null=18000000, Myanmar=null, USA=400000000,
