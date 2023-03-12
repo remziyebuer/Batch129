@@ -1,4 +1,4 @@
-package java_core.day23_datetime_stringbuilder.day24_accessmodifiers_inheritance;
+package java_core.day24_accessmodifiers_inheritance;
 
 public class Vehicle {
 
