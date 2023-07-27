@@ -13,7 +13,7 @@ public class Variables01 {
         // java cümlesi= Statement
         // Access Modifier yazmazsaniz "access modifier" "default" demektir
         //Eger Variable Declaration yapar Assigment yapmaz isek
-        // Java kendi degerölerini (default) koyar.Default degerler sayilar icin sifirdir
+        // Java kendi degerlerini (default) koyar.Default degerler sayilar icin sifirdir
         //Stringler icin " default value" "null"dir yoklugun da yoklugu; bos küme her kümenin
         // altkümesi gibi
         //1.Data Type' ini yaziniz. 2.Variable ismini yaziniz   3.Atama Operatörü
