@@ -18,7 +18,7 @@ public class MethodOverLoading01 {
         "private"olmak ise baska class'lara gidildiginde problem olusturur.
         6)"static" metod'lar overload edilebilirler.
 
-     Notlar:   i) Dunya ile alakali iki temel obje var.Bir insanlar  bir de ays gibi objeler.Ay' a  iki
+     Notlar:   i) Dunya ile alakali iki temel obje var.Bir insanlar  bir de ay gibi objeler.Ay' a  iki
                 cizik atsak Cem ' de Amerika da ki Jim' de bu cizigi görür.Cem ' in kafasi yarilsa Jim
                 göremeyebilir.Ay gibi objelerde ki degisiklikler aninda görulur.Insan gibi objelerde
                 ki degisiklikler herkes tarafindan görülmez.

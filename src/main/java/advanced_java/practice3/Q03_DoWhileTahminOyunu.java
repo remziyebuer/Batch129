@@ -2,7 +2,7 @@ package advanced_java.practice3;
 
 import java.util.Scanner;
 
-public class DoWhileTahminOyunu {
+public class Q03_DoWhileTahminOyunu {
     public static void main(String[] args) {
 
 //0 ile 100 arasında rastgele numara tahmini yapan bir kod yazın.
