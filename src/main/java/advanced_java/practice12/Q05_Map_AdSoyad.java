@@ -1,4 +1,4 @@
-package advanced_java;
+package advanced_java.practice12;
 
 import java.util.HashMap;
 import java.util.Map;
