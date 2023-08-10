@@ -79,4 +79,5 @@ public class Q04_Bakkal {
         }
         return ortalamaGunler;
     }
+
 }
